@@ -1,0 +1,207 @@
+.card {
+  width: 450px;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
+  0px 105px 63px rgba(0, 0, 0, 0.05), 
+  0px 47px 47px rgba(0, 0, 0, 0.09), 
+  0px 12px 26px rgba(0, 0, 0, 0.1), 
+  0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 17px 17px 27px 27px;
+}
+.title {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  border-bottom: 1px solid #f1f1f1;
+  font-weight: 700;
+  font-size: 13px;
+  color: #47484b;
+}
+.title::after {
+  content: '';
+  width: 8ch;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  background-color: #47484b;
+}
+.comments {
+  /*display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 20px;*/
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+}
+.comment-react {
+  width: 35px;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto;
+  margin: 0;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.comment-react button {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+.comment-react button:after {
+  content: '';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -2.5px;
+  top: -2.5px;
+  background-color: #f5356e;
+  border-radius: 50%;
+  z-index: 0;
+  transform: scale(0);
+}
+.comment-react button svg {
+  position: relative;
+  z-index: 9;
+}
+.comment-react button:hover:after {
+  animation: ripple 0.6s ease-in-out forwards;
+}
+
+.comment-react button:hover svg {
+  fill: #f5356e;
+}
+.comment-react button:hover svg path {
+  stroke: #f5356e;
+  fill: #f5356e;
+}
+.comment-react hr {
+  width: 80%;
+  height: 1px;
+  background-color: #dfe1e6;
+  margin: auto;
+  border: 0;
+}
+.comment-react span {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: #707277;
+}
+.comment-container .user .user-info span {
+  font-weight: 700;
+  font-size: 12px;
+  color: #47484b;
+}
+.comment-container .user .user-info p {
+  font-weight: 600;
+  font-size: 10px;
+  color: #acaeb4;
+}
+.comment-container .comment-content {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #5f6064;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 20px;
+}
+.text-box {
+  width: 100%;
+  height: fit-content;
+  background-color: #f1f1f1;
+  padding: 8px;
+}
+.text-box textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 12px 10px 12px;
+  font-size: 13px;
+  outline: none;
+  caret-color: #0a84ff;
+}
+.text-box .formatting button {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+}
+.text-box .formatting .send {
+  width: 90px;
+  height: 31px;
+  background-color: #0a84ff;
+  margin: 0 0 0 auto;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-box .formatting .send:hover {
+  background-color: #026eda;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+#icone-mensagem i {
+  border-radius: 50%;
+  border: 2px solid;
+  font-size: 35px;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 
+  0px 105px 63px rgba(0, 0, 0, 0.05), 
+  0px 47px 47px rgba(0, 0, 0, 0.09), 
+  0px 12px 26px rgba(0, 0, 0, 0.1), 
+  0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+.ocultar {
+  display: none;
+}
+#card-chat {
+  position: absolute;
+  right: 6rem;
+  bottom: 6rem;
+}
+@media(max-width: 500px) {
+  #card-chat {
+    right: 0;
+    width: 100%;
+  }
+}
